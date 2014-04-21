@@ -37,6 +37,10 @@
         <intercept-url pattern="/homepage/**" access="ROLE_USER" />
         <intercept-url pattern="/login.html*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         
+        <intercept-url pattern="*/system/role/**" access="ROLE_ROLE_FORM" />
+        <intercept-url pattern="/role/**" access="ROLE_ROLE_VIEW" method="GET"/>
+        <intercept-url pattern="/role/**" access="ROLE_ROLE_EDIT"/>
+        
         <intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
         <form-login login-page="/login.html" 
                     default-target-url="/main.html" 

@@ -36,6 +36,8 @@ angular.module('belajar', ['ngRoute', 'ui', 'belajar.controller'])
             function error(response){
                 if (response.status === 401) {
                     $location.path('/401');
+                } else if (response.status === 403) {
+                    alert("Anda tidak diperkenankan untuk mengakses halaman tersebut !! ");
                 }
             }
             
